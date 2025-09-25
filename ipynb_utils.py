@@ -15,5 +15,5 @@ def load_var(var_name):
         raise FileNotFoundError(f"No saved variable named {var_name} at {path}")
     with open(path, "rb") as f:
         var = pickle.load(f)
-    print(f"📂 Loaded {var_name} from {path}")
     globals()[var_name] = var
+    print(f"📂 Loaded {var_name} from {path}")
